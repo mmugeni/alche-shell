@@ -1,2 +1,2 @@
 #!bin/bash
-cd ~
+cd ~ echo '2-bring_me_home'
