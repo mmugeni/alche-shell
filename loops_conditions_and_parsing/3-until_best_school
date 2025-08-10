@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#displays 10 best schools
 i=1
 until [ $i -gt 10 ]
 do
