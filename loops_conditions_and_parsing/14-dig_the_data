@@ -1,5 +1,5 @@
 #!/bin/bash
-
+#dig the data
 awk '
 {
   count[$1" "$9]++
