@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 #for _ls
 for file in *; do
   # Check if file name contains a dash
