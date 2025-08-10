@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-# This script groups visitor IP and HTTP code occurrences, sorted descending, no shell loops or awk loops
+# Same as above but no awk loops
 
-awk '{print $1, $9}' apache-access.log | sort | uniq -c | sort -rn | awk '{print $1, $2, $3}'
+awk '{print $1, $9}' apache-access.log | sort | uniq -c | sort -rn | awk '{$1=$1; print}'
