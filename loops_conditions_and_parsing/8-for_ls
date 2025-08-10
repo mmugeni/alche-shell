@@ -1,0 +1,11 @@
+#!/bin/bash
+for file in *; do
+  # Check if file name contains a dash
+  if [[ "$file" == *-* ]]; then
+    # Extract the part after the first dash
+    echo "${file#*-}"
+  else
+    # If no dash, print the whole name
+    echo "$file"
+  fi
+done
