@@ -1,11 +1,8 @@
 #!/usr/bin/env bash
-#dig the data
-awk '
-{
-  count[$1" "$9]++
-}
-END {
-  for (key in count)
-    print count[key], key
-}
-' apache-access.log | sort -nr
+# This script groups visitor IP and HTTP status code, displaying the number of occurrences sorted descending
+
+awk '{ count[$1" "$9]++ }
+     END {
+       for (key in count) 
+         print count[key], key
+     }' apache-access.log | sort -rn
