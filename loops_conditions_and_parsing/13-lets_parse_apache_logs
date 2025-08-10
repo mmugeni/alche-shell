@@ -1,14 +1,4 @@
 #!/usr/bin/env bash
-#lets parse
-hour=0
-while [ $hour -le 12 ]; do
-  echo "Hour: $hour"
-  
-  minute=1
-  while [ $minute -le 59 ]; do
-    echo "$minute"
-    minute=$((minute + 1))
-  done
-  
-  hour=$((hour + 1))
-done
+# This script extracts visitor IP and HTTP status code from the Apache log file
+
+awk '{print $1, $9}' apache-access.log
